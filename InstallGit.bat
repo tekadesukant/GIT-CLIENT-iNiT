@@ -6,7 +6,7 @@ net session >nul 2>&1
 if %errorLevel% neq 0 (
     echo.
     echo ===================================
-    echo Please run this script as an administrator.
+    echo Run this script as an administrator.
     echo ===================================
     echo.
     pause
@@ -19,7 +19,7 @@ setlocal enabledelayedexpansion
 
 echo.
 echo ==========================================
-echo Git Automation Installation Script by tekadesukant
+echo Git Auto Installation Script by tekadesukant
 echo ==========================================
 echo.
 
