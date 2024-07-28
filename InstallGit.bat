@@ -1,25 +1,28 @@
 @echo off
 title Git Installation Script
 
-REM Check if running as administrator
-net session >nul 2>&1
-if %errorLevel% neq 0 (
-    echo.
-    echo ===================================
-    echo Run this script as an administrator.
-    echo ===================================
-    echo.
-    pause
-    timeout /t 10 /nobreak >nul
-    exit /b 1
-)
-
 REM Enable delayed expansion
 setlocal enabledelayedexpansion
 
+REM Check if the script is running as administrator
+openfiles >nul 2>&1
+if %errorlevel% neq 0 (
+    echo.
+    echo ==========================================
+    echo Git Automation Installation Script by tekadesukant
+    echo ==========================================
+    echo.
+    echo [INFO] Requesting administrative privileges...
+    echo.
+    
+    REM Re-run the script as administrator
+    powershell -Command "Start-Process '%~f0' -Verb RunAs"
+    exit /b
+)
+
 echo.
 echo ==========================================
-echo Git Auto Installation Script by tekadesukant
+echo Git Automation Installation Script by tekadesukant
 echo ==========================================
 echo.
 
@@ -38,7 +41,6 @@ REM Install Git using winget
 echo.
 echo [INFO] Installing Git...
 echo.
-
 
 winget install --id Git.Git -e --source winget
 
