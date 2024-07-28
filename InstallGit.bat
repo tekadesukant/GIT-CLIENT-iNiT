@@ -8,10 +8,6 @@ REM Check if the script is running as administrator
 openfiles >nul 2>&1
 if %errorlevel% neq 0 (
     echo.
-    echo ==========================================
-    echo Git Automation Installation Script by tekadesukant
-    echo ==========================================
-    echo.
     echo [INFO] Requesting administrative privileges...
     echo.
     
@@ -21,9 +17,9 @@ if %errorlevel% neq 0 (
 )
 
 echo.
-echo ==========================================
-echo Git Automation Installation Script by tekadesukant
-echo ==========================================
+echo ===========================
+echo "GitEasy by Sukant Tekade"
+echo ===========================
 echo.
 
 REM Check if winget is installed
