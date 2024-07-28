@@ -1,5 +1,5 @@
 @echo off
-title Git Installation Script
+title GitEasy by Sukant Tekade
 
 REM Enable delayed expansion
 setlocal enabledelayedexpansion
@@ -16,6 +16,7 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
+cls
 echo.
 echo ===========================
 echo "GitEasy by Sukant Tekade"
@@ -25,8 +26,8 @@ echo.
 REM Check if winget is installed
 if not exist "%ProgramFiles%\WindowsApps\Microsoft.DesktopAppInstaller_*.msixbundle" (
     echo [INFO] Winget is not installed. Installing Winget...
-    powershell -Command "Invoke-WebRequest -Uri 'https://aka.ms/getwinget' -OutFile '$env:TEMP\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'"
-    powershell -Command "Add-AppxPackage -Path '$env:TEMP\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'"
+    powershell -Command "Invoke-WebRequest -Uri 'https://aka.ms/getwinget' -OutFile '%TEMP%\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'"
+    powershell -Command "Add-AppxPackage -Path '%TEMP%\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'"
     del "%TEMP%\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
     echo [INFO] Winget installation completed.
 ) else (
