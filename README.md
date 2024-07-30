@@ -86,6 +86,6 @@ The `InstallGit.bat` script performs the following actions:
 
 ## 📣 **Feedback & Support**
 
-For any issues or feedback, please feel free to reach out through the [GitHub Issues page](https://github.com/tekadesukant/your-repository/issues). Your input is valuable for improving this tool.
+For any issues or feedback, please feel free to reach out through the [GitHub Issues page](https://github.com/tekadesukant/Git-Client-iNiT/issues). Your input is valuable for improving this tool.
 
 Happy coding! 💻🚀
